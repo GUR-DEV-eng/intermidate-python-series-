@@ -1,1 +1,21 @@
-This repository features a curated collection of seven intermediate Python list operations designed to bridge the gap between basic syntax and high-level algorithmic efficiency. The script provides elegant, "Pythonic" solutions to common data challenges, such as removing duplicates while maintaining order, flattening deeply nested structures through recursion, and performing seamless matrix transpositions using the zip(*) unpacking operator. By integrating advanced techniques like list slicing for rotations, chunking logic for batch processing, and set theory for lightning-fast intersections, this toolkit serves as a practical reference for writing clean, performant code. Each function is fully documented to highlight the underlying logic—from type-checking with isinstance to $O(n)$ complexity management—making it an essential resource for developers looking to master Python’s most versatile data structure.
+# 🚀 Intermediate Python Series
+
+This repository contains intermediate-level Python problems with clean, well-commented solutions.
+
+## 📌 Topics Covered
+- List manipulation (rotation, chunking, duplicates)
+- Recursion (flatten nested list)
+- Matrix operations (transpose using zip)
+- Set operations (intersection)
+
+## 🧠 What I Learned
+- Writing Pythonic code using slicing and built-ins
+- Optimizing time complexity using sets
+- Breaking complex problems using recursion
+
+## 💻 Example
+
+```python
+def rotate(lst, k):
+    k = k % len(lst)
+    return lst[k:] + lst[:k]
