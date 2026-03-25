@@ -1,16 +1,19 @@
+# Problem: Find first non-repeating character
+# Example: "aabbcde" → "c"
+
 def first_non_repeating_char(s: str) -> str:
-    # Count occurrences of each character
     char_count = {}
+    
+    # Count frequency
     for ch in s:
         char_count[ch] = char_count.get(ch, 0) + 1
     
-    # Find the first character with count == 1
+    # Find first unique character
     for ch in s:
         if char_count[ch] == 1:
             return ch
-    return None  # If no non-repeating character exists
+    
+    return ""
 
-# Example usage
-input_str = "aabbcde"
-result = first_non_repeating_char(input_str)
-print("First non-repeating character:", result)
+# Test
+print(first_non_repeating_char("aabbcde"))  # Output: c
