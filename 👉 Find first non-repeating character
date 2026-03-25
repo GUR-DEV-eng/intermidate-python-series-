@@ -1,0 +1,16 @@
+def first_non_repeating_char(s: str) -> str:
+    # Count occurrences of each character
+    char_count = {}
+    for ch in s:
+        char_count[ch] = char_count.get(ch, 0) + 1
+    
+    # Find the first character with count == 1
+    for ch in s:
+        if char_count[ch] == 1:
+            return ch
+    return None  # If no non-repeating character exists
+
+# Example usage
+input_str = "aabbcde"
+result = first_non_repeating_char(input_str)
+print("First non-repeating character:", result)
