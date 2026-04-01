@@ -1,0 +1,13 @@
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+small = min(a, b)
+hcf = 1
+i = 1
+
+while i <= small:
+    if a % i == 0 and b % i == 0:
+        hcf = i
+    i += 1
+
+print("HCF of", a, "and", b, "is", hcf)
