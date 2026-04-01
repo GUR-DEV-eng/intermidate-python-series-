@@ -1,13 +1,24 @@
+# Read two integers from the user
 a = int(input("Enter first number: "))
 b = int(input("Enter second number: "))
 
+# Find the smaller of the two numbers
 small = min(a, b)
+
+# Initialize hcf to 1 (1 is always a common factor)
 hcf = 1
+
+# Start checking from 1 up to the smaller number
 i = 1
 
+# Loop through all numbers from 1 to small
 while i <= small:
+    # If i divides both a and b, then i is a common factor
     if a % i == 0 and b % i == 0:
+        # Update hcf to the current common factor (larger than previous)
         hcf = i
+    # Move to the next number
     i += 1
 
+# Print the highest common factor (HCF) of a and b
 print("HCF of", a, "and", b, "is", hcf)
