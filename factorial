@@ -1,0 +1,12 @@
+n = int(input("Enter the number: "))
+i = 2
+factors = 0
+
+print("Factors of", n, "are:")
+while i <= n:
+    if n % i == 0:
+        print(i)
+        factors += 1
+    i += 1      
+
+print("The number of factors of", n, "is", factors)
